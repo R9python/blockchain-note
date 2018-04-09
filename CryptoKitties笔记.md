@@ -124,13 +124,6 @@
         14. COO能够创建Promo猫（Core createPromoKitty()）
         15. COO能够创建0代猫,并放入拍卖市场（Core createGen0Auction()）
 
-
-参考链接
------
-        https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
-        https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
-        https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/
-
 Q & A
 -----
 1. 如果账户被锁,即提示 account locked 怎么办?
@@ -156,3 +149,9 @@ Q & A
 
         //把880000000000000000 wei转换为ether为单位的数值,即 0.88 ether
         web3._extend.utils.fromWei(880000000000000000,'ether');
+
+参考链接
+-----
+        https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
+        https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
+        https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/
