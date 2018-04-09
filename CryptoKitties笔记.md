@@ -155,3 +155,6 @@ Q & A
         https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
         https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
         https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/
+        http://truffleframework.com/docs/getting_started/migrations
+        http://truffleframework.com/tutorials/pet-shop
+        http://truffleframework.com/boxes/tutorialtoken
