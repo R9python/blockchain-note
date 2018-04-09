@@ -151,8 +151,8 @@ Q & A
 
 5. 价格参数的单位是wei, ether和wei如何转换?
 
-        //把0.000000002 ether转换为wei为单位的数值
+        //把0.000000002 ether转换为wei为单位的数值, 即 2000000000 wei
         web3._extend.utils.toWei(0.000000002,'ether');
 
-        //把880000000000000000 wei转换为ether为单位的数值
+        //把880000000000000000 wei转换为ether为单位的数值,即 0.88 ether
         web3._extend.utils.fromWei(880000000000000000,'ether');
