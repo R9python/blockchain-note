@@ -24,7 +24,7 @@
 
         ABI: 定义外部有哪些接口可以调用
         contracts: 智能合约源代码
-        migrations: 部署使用的js脚步
+        migrations: 部署使用的js脚本
         scripts: client调用示例
         test: 测试
         truffle.js: 运行truffle migrate部署时会使用到该文件
