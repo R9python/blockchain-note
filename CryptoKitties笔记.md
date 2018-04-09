@@ -1,5 +1,6 @@
 准备工作
 -----
+        翻墙
         安装nodejs和npm
         安装git
         安装truffle: npm install -g truffle
@@ -129,3 +130,21 @@
         https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
         https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
         https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/
+
+Q & A
+-----
+1. 如果账户被锁,即提示 account locked 怎么办?
+
+        personal.unlockAccount('0x10F834Ed288CcDf11786a6b9d5f3dcFb3e83f415',"11111111",10000000)
+
+2. kitty怀孕后,倒数多少时间才能生出小猫?
+
+        取kitty的cooldownIndex, 然后在cooldowns数组中找到对应的时间,就是倒数时间.
+
+3. gas limit 问题?
+
+        gas limit 表示计算的步数限制, 调用方法的时候可以使用{gas: 250000}设置,该值一定要大于实际使用的数值.
+
+4. rinkeby 网络上的账户没ether怎么办?
+
+        在twitter上发推, 然后copy twitter link, 然后去 https://faucet.rinkeby.io/ 网站粘贴地址并领取ether.
