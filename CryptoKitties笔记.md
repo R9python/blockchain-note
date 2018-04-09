@@ -20,21 +20,24 @@
         note: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
 
 3. 代码目录详解
-    ABI: 定义外部有哪些接口可以调用
-    contracts: 智能合约源代码
-    migrations: 部署使用的js脚步
-    scripts: client调用示例
-    test: 测试
-    truffle.js: 运行truffle migrate部署时会使用到该文件
+
+        ABI: 定义外部有哪些接口可以调用
+        contracts: 智能合约源代码
+        migrations: 部署使用的js脚步
+        scripts: client调用示例
+        test: 测试
+        truffle.js: 运行truffle migrate部署时会使用到该文件
 
 4. 安装依赖
-    运行 npm install, 生成node_modules
+
+        运行 npm install, 生成node_modules
 
 5. 编写migration文件用来部署
-    var core = artifacts.require("./KittyCore.sol");
-    var sale = artifacts.require("./Auction/SaleClockAuction.sol");
-    var sire = artifacts.require("./Auction/SiringClockAuction.sol");
-    var gene = artifacts.require("./ExternalInterface/GeneScience.sol");
+
+        var core = artifacts.require("./KittyCore.sol");
+        var sale = artifacts.require("./Auction/SaleClockAuction.sol");
+        var sire = artifacts.require("./Auction/SiringClockAuction.sol");
+        var gene = artifacts.require("./ExternalInterface/GeneScience.sol");
 
     module.exports = function(deployer) {
         deployer.deploy(core)//部署core
@@ -53,7 +56,7 @@
     };
 
 6. 编写truffle.js
-    module.exports = {
+        module.exports = {
         networks: {
             // https://www.rinkeby.io/
             // https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
