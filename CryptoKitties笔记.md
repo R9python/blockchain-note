@@ -108,3 +108,5 @@
 参考链接
 -----
         https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
+        https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/
+        https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/
