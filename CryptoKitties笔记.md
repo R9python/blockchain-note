@@ -1,21 +1,23 @@
-准备工作:
-    安装nodejs和npm
-    安装git
-    安装truffle: npm install -g truffle
-    安装mist: https://github.com/Ethereum/Mist/releases
-    安装geth(需要先安装homebrew): https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac
-    下载CryptoKitties官方团队代码: https://github.com/dapperlabs/cryptokitties-bounty
+准备工作
+-----
+        安装nodejs和npm
+        安装git
+        安装truffle: npm install -g truffle
+        安装mist: https://github.com/Ethereum/Mist/releases
+        安装geth(需要先安装homebrew): https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac
+        下载CryptoKitties官方团队代码: https://github.com/dapperlabs/cryptokitties-bounty
 
-第一部分:部署CryptoKitties
-1.启动geth,并使之连接到rinkeby测试网络
+部署CryptoKitties
+-----
+1. 启动geth,并使之连接到rinkeby测试网络
     geth --rpccorsdomain '*' --rinkeby --rpc console --rpcapi "eth,net,web3,admin,personal"
     note: 如果是部署到公共的开发or生产服务器,可以使用参数来指定ip, port --rpcaddr 192.168.1.235 --rpcport 8545
 
-2.使用命令行启动Mist
+2. 使用命令行启动Mist
     进入Applications目录, 运行 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
     note: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
 
-3.代码目录详解
+3. 代码目录详解
     ABI: 定义外部有哪些接口可以调用
     contracts: 智能合约源代码
     migrations: 部署使用的js脚步
@@ -23,10 +25,10 @@
     test: 测试
     truffle.js: 运行truffle migrate部署时会使用到该文件
 
-4.安装依赖
+4. 安装依赖
     运行 npm install, 生成node_modules
 
-5.编写migration文件用来部署
+5. 编写migration文件用来部署
     var core = artifacts.require("./KittyCore.sol");
     var sale = artifacts.require("./Auction/SaleClockAuction.sol");
     var sire = artifacts.require("./Auction/SiringClockAuction.sol");
@@ -48,7 +50,7 @@
         });
     };
 
-6.编写truffle.js
+6. 编写truffle.js
     module.exports = {
         networks: {
             // https://www.rinkeby.io/
@@ -74,11 +76,11 @@
         }
     };
 
-7.使用truffle部署
+7. 使用truffle部署
     truffle migrate --network rinkeby
     note: 可以添加 --reset 参数强制更新部署
 
-8.部署完成后,会得到4个合约地址
+8. 部署完成后,会得到4个合约地址
     core
     0x1d6265585ab4f9d94c392736b781a3dd6da05fe5
     sale
@@ -88,7 +90,7 @@
     gene
     0xcf6df2d8b22470f25f64d1faa8910c3a8fc7c7e3
 
-9.对部署完成的合约进行设置
+9. 对部署完成的合约进行设置
     设置销售拍卖的合约地址: set sale auction address
     设置繁殖拍卖的合约地址: set siring auction address
     设置基因合约地址: set gene science address
