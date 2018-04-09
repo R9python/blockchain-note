@@ -4,18 +4,20 @@
         安装git
         安装truffle: npm install -g truffle
         安装mist: https://github.com/Ethereum/Mist/releases
-        安装geth(需要先安装homebrew): https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac
-        下载CryptoKitties官方团队代码: https://github.com/dapperlabs/cryptokitties-bounty
+        安装geth: https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac
+        下载CryptoKitties代码: https://github.com/dapperlabs/cryptokitties-bounty
 
 部署CryptoKitties
 -----
 1. 启动geth,并使之连接到rinkeby测试网络
-    geth --rpccorsdomain '*' --rinkeby --rpc console --rpcapi "eth,net,web3,admin,personal"
-    note: 如果是部署到公共的开发or生产服务器,可以使用参数来指定ip, port --rpcaddr 192.168.1.235 --rpcport 8545
+
+        geth --rpccorsdomain '*' --rinkeby --rpc console --rpcapi "eth,net,web3,admin,personal"
+        note: 如果是部署到公共的开发or生产服务器,可以使用参数来指定ip, port --rpcaddr 192.168.1.235 --rpcport 8545
 
 2. 使用命令行启动Mist
-    进入Applications目录, 运行 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-    note: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
+
+        进入Applications目录, 运行 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+        note: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
 
 3. 代码目录详解
     ABI: 定义外部有哪些接口可以调用
