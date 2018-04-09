@@ -39,11 +39,11 @@
         var sire = artifacts.require("./Auction/SiringClockAuction.sol");
         var gene = artifacts.require("./ExternalInterface/GeneScience.sol");
 
-    module.exports = function(deployer) {
+        module.exports = function(deployer) {
         deployer.deploy(core)//部署core
         .then(function(){
-            //core部署完成后,部署处理销售拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
-            deployer.deploy(sale, core.address, 375);
+        //core部署完成后,部署处理销售拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
+        deployer.deploy(sale, core.address, 375);
         })
         .then(function(){
             //core部署完成后,部署处理繁殖拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
