@@ -148,3 +148,11 @@ Q & A
 4. rinkeby 网络上的账户没ether怎么办?
 
         在twitter上发推, 然后copy twitter link, 然后去 https://faucet.rinkeby.io/ 网站粘贴地址并领取ether.
+
+5. 价格参数的单位是wei, ether和wei如何转换?
+
+        //把0.000000002 ether转换为wei为单位的数值
+        web3._extend.utils.toWei(0.000000002,'ether');
+
+        //把880000000000000000 wei转换为ether为单位的数值
+        web3._extend.utils.fromWei(880000000000000000,'ether');
