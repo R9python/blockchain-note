@@ -86,7 +86,7 @@
 7. 使用truffle部署
 
         truffle migrate --network rinkeby
-        备注: 可以添加 --reset 参数强制更新部署
+        备注: 可以添加 --reset 参数强制更新部署; 这里的--network rinkeby就是告知命令行去truffle.js中找"rinkeby"这个节点的参数配置进行部署
 
 8. 部署完成后,会得到4个合约地址
 
