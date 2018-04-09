@@ -105,6 +105,6 @@
         设置基因合约地址: set gene science address
         启动: unpause (由于合约部署完成后,默认是paused状态,因此需要运行unpause)
 
-参考链接:
+参考链接
 -----
         https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
