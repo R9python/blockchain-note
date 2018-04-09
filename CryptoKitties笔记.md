@@ -40,22 +40,23 @@
         var gene = artifacts.require("./ExternalInterface/GeneScience.sol");
 
         module.exports = function(deployer) {
-        deployer.deploy(core)//部署core
-        .then(function(){
-        //core部署完成后,部署处理销售拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
-        deployer.deploy(sale, core.address, 375);
-        })
-        .then(function(){
-            //core部署完成后,部署处理繁殖拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
-            deployer.deploy(sire, core.address, 375);
-        })
-        .then(function(){
-            //部署基因合约
-            deployer.deploy(gene);
-        });
+                deployer.deploy(core)//部署core
+                .then(function(){
+                //core部署完成后,部署处理销售拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
+                deployer.deploy(sale, core.address, 375);
+                })
+                .then(function(){
+                    //core部署完成后,部署处理繁殖拍卖的智能合约,使用core的合约地址,并设置3.75%的tax
+                    deployer.deploy(sire, core.address, 375);
+                })
+                .then(function(){
+                    //部署基因合约
+                    deployer.deploy(gene);
+                });
         };
 
 6. 编写truffle.js
+
         module.exports = {
         networks: {
             // https://www.rinkeby.io/
@@ -87,6 +88,7 @@
         note: 可以添加 --reset 参数强制更新部署
 
 8. 部署完成后,会得到4个合约地址
+
         core
         0x1d6265585ab4f9d94c392736b781a3dd6da05fe5
         sale
