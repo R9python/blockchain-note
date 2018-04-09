@@ -53,7 +53,7 @@
             //部署基因合约
             deployer.deploy(gene);
         });
-    };
+        };
 
 6. 编写truffle.js
         module.exports = {
@@ -79,29 +79,30 @@
         mocha: {
             bail: true
         }
-    };
+        };
 
 7. 使用truffle部署
-    truffle migrate --network rinkeby
-    note: 可以添加 --reset 参数强制更新部署
+
+        truffle migrate --network rinkeby
+        note: 可以添加 --reset 参数强制更新部署
 
 8. 部署完成后,会得到4个合约地址
-    core
-    0x1d6265585ab4f9d94c392736b781a3dd6da05fe5
-    sale
-    0x39bceff813f5fe5d083754a37f0ab6e07600645a
-    siring
-    0xaac0ba8ede39174fb6d7b82ca00f475bb63b0cec
-    gene
-    0xcf6df2d8b22470f25f64d1faa8910c3a8fc7c7e3
+        core
+        0x1d6265585ab4f9d94c392736b781a3dd6da05fe5
+        sale
+        0x39bceff813f5fe5d083754a37f0ab6e07600645a
+        siring
+        0xaac0ba8ede39174fb6d7b82ca00f475bb63b0cec
+        gene
+        0xcf6df2d8b22470f25f64d1faa8910c3a8fc7c7e3
 
 9. 对部署完成的合约进行设置
-    设置销售拍卖的合约地址: set sale auction address
-    设置繁殖拍卖的合约地址: set siring auction address
-    设置基因合约地址: set gene science address
-    启动: unpause (由于合约部署完成后,默认是paused状态,因此需要运行unpause)
 
+        设置销售拍卖的合约地址: set sale auction address
+        设置繁殖拍卖的合约地址: set siring auction address
+        设置基因合约地址: set gene science address
+        启动: unpause (由于合约部署完成后,默认是paused状态,因此需要运行unpause)
 
-----------
 参考链接:
-https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
+-----
+        https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/
