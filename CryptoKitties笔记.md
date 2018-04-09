@@ -1,6 +1,6 @@
 准备工作
 -----
-        翻墙
+        先翻墙出去
         安装nodejs和npm
         安装git
         安装truffle: npm install -g truffle
