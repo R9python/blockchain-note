@@ -20,7 +20,7 @@
         进入Applications目录, 运行 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
         备注: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
 
-3. 代码目录详解
+3. Project结构
 
         ABI: 定义外部有哪些接口可以调用
         contracts: 智能合约源代码
