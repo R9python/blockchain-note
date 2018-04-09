@@ -12,12 +12,12 @@
 1. 启动geth,并使之连接到rinkeby测试网络
 
         geth --rpccorsdomain '*' --rinkeby --rpc console --rpcapi "eth,net,web3,admin,personal"
-        note: 如果是部署到公共的开发or生产服务器,可以使用参数来指定ip, port --rpcaddr 192.168.1.235 --rpcport 8545
+        备注: 如果是部署到公共的开发or生产服务器,可以使用参数来指定ip, port --rpcaddr 192.168.1.235 --rpcport 8545
 
 2. 使用命令行启动Mist
 
         进入Applications目录, 运行 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-        note: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
+        备注: 第一次启动会同步区块,需要较长时间,请耐心等待同步完成
 
 3. 代码目录详解
 
@@ -85,7 +85,7 @@
 7. 使用truffle部署
 
         truffle migrate --network rinkeby
-        note: 可以添加 --reset 参数强制更新部署
+        备注: 可以添加 --reset 参数强制更新部署
 
 8. 部署完成后,会得到4个合约地址
 
