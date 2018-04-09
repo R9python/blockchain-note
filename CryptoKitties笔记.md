@@ -107,25 +107,21 @@
 
 玩转CryptoKitties
 -----
-1. COO每隔15分钟产生一个0代的猫，并进行拍卖（Main createGen0Auction()）
-2. 用户可以购买0代猫（Sale Auction bid()）
-3. 用户可以查询猫的数据（Main getKitty()）
-4. 用户可以自己繁衍猫（Main breedWith() or breedWithAuto()）: gas:200000, value
-5. 修养期后，用户可以得到新的猫（Main giveBirth()）
-6. 用户可以把一只猫作为父亲，拍卖他的生育服务（Main createSiringAuction()）
-7. 用户把一只猫作为父亲，为某个以太坊地址提供生育服务（Main approveSiring()）
-8. 用户可以购买一只猫的生育服务（Main createSiringAuction()）
-9. 用户可以拍卖他的猫（Main createSaleAuction()）
-10. 用户可以购买被拍卖的猫（Sale Auction bid()）
-11. 用户可以查看被拍卖猫的信息（Sale/Siring Auction getAuction()）
-12. 用户能够取消拍卖（Sale/Siring Auction cancelAuction()）
-13. 用户能够赠送猫（Main transfer()）
-14. 用户能够指定另一个用户能够获得他的猫的权限（Main approve()）
-15. 用户可以认领自己被指定获得权限的猫（Main transferFrom()）
-16. 只有CEO能够替换COO或者CTO（Main setCEO() setCFO() setCOO()）
-17. COO能够创建和操作特殊的猫（Main createPromoKitty()）
-18. COO能够转移拍卖的收入（Main withdrawAuctionBalances()）
-19. CFO能够转移主协议的收益（Main withdrawBalance()）
+        1. COO每隔15秒产生一个0代的猫，并放入拍卖市场（Core createGen0Auction()）
+        2. 用户可以购买0代猫（Sale Auction bid()）
+        3. 用户可以查询猫的数据（Core getKitty()）
+        4. 用户可以繁衍自己的两只猫（Core breedWithAuto()）
+        5. 怀孕期满后，生出新的猫（Core giveBirth()）
+        6. 用户可以把一只猫作为父亲,放入繁殖市场（Core createSiringAuction()）
+        7. 用户可以把一只猫作为母亲,去购买另一只猫的生育服务（Core bidOnSiringAuction()）
+        8. 用户可以卖猫,放入卖猫的市场（Core createSaleAuction()）
+        9. 用户可以购买在售的猫（Sale Auction bid()）
+        10. 用户可以查看被拍卖猫的信息（Sale/Siring Auction getAuction()）
+        11. 用户能够取消拍卖（Sale/Siring Auction cancelAuction()）
+        12. 用户能够赠送猫（Core transfer()）
+        13. 只有CEO能够设置COO, CFO（Core setCEO() setCFO() setCOO()）
+        14. COO能够创建Promo猫（Core createPromoKitty()）
+        15. COO能够创建0代猫,并放入拍卖市场（Core createGen0Auction()）
 
 
 参考链接
